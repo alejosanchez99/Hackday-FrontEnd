@@ -6,22 +6,7 @@ const Users = () => {
   const [connection, setConnection] = useState(null);
   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-    const usersTest = [
-      { name: "Daniel Arboleda", id: "" },
-      { name: "Alejandro Sanchez", id: "" },
-      { name: "Diego Correa", id: "" },
-      { name: "Kevin Suárez", id: "" },
-      { name: "Cristian Herrera", id: "" },
-      { name: "Kevin Suárez", id: "" },
-      { name: "Cristian Herrera", id: "" },
-      { name: "Daniel Arboleda", id: "" },
-      { name: "Alejandro Sanchez", id: "" },
-      { name: "Diego Correa", id: "" },
-    ]
-
-    setUsers(usersTest);
-  }, []);
+  const [green, setGreen] = useState(false);  
 
   useEffect(() => {
     setConnection(initWSConnection('user'))
@@ -32,15 +17,23 @@ const Users = () => {
   }, [connection])
 
   useEffect(() => {
-    console.log("users", users);
+    setGreen(true);
   }, [users]);
+
+  useEffect(() => {
+    if (green) {
+      setTimeout(() => {
+        setGreen(false);
+      }, 500);
+    } 
+  }, [green]);
 
   return (
     <div className='users-container'>
       <ul>
         {
           users.map((user) => {
-            return <li>{user.name}</li>
+            return <li className={green ? 'green' : ''}>{user.name}</li>
           })
         }
       </ul>

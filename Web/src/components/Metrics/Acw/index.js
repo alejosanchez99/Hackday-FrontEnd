@@ -6,20 +6,31 @@ const Acw = () => {
   const [connection, setConnection] = useState(null);
   const [acw, setAcw] = useState([]);
 
+  const [green, setGreen] = useState(false);
+
   useEffect(() => {
-    //setConnection(initWSConnection('user'))
+    setConnection(initWSConnection('metric'))
   }, [])
 
   useEffect(() => {
-    //getData(connection, 'Acw', setAcw)
+    getData(connection, 'acw', setAcw)
   }, [connection])
 
   useEffect(() => {
     console.log("Acw", acw);
+    setGreen(true);
   }, [acw]);
 
+  useEffect(() => {
+    if (green) {
+      setTimeout(() => {
+        setGreen(false);
+      }, 500);
+    } 
+  }, [green]);
+
   return (
-    <Metric {...acw} />
+    <Metric {...acw} className={green ? 'green' : ''} />
   )
 }
 

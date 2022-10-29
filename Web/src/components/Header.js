@@ -15,8 +15,8 @@ const Header = () => {
 
   return (
     <nav className='navbar navbar-dark bg-dark'>
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#">
 
           ATOM
         </a>

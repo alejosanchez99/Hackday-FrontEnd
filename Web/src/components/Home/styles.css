@@ -55,4 +55,16 @@
   .home {
     width: 100%;
   }
+
+  .container-home {
+    flex-direction: column;
+  }
+
+  .container-home .users {
+    width: 100%;
+  }
+
+  .container-home .home {
+    width: 100%;
+  }
 }

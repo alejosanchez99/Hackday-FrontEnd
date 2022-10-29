@@ -19,14 +19,14 @@ const Home = () => {
         <Users />
       </div>
       <div className='home'>
-        <ul class="nav nav-tabs">
-          <li class="nav-item" onClick={() => setViewGeneralActive(true)}>
-            <a class={`nav-link ${isViewGeneralActive ? 'active' : ''}`} aria-current="page">
+        <ul className="nav nav-tabs">
+          <li className="nav-item" onClick={() => setViewGeneralActive(true)}>
+            <a className={`nav-link ${isViewGeneralActive ? 'active' : ''}`} aria-current="page">
               General
             </a>
           </li>
-          <li class="nav-item" onClick={() => setViewGeneralActive(false)}>
-            <a class={`nav-link ${!isViewGeneralActive ? 'active' : ''}`}>Monitoreo</a>
+          <li className="nav-item" onClick={() => setViewGeneralActive(false)}>
+            <a className={`nav-link ${!isViewGeneralActive ? 'active' : ''}`}>Monitoreo</a>
           </li>
         </ul>
 

@@ -11,3 +11,15 @@
     margin: 10px;
     padding: 0;
 }
+
+.users-container ul li.green {
+    color: #198754;
+}
+
+.metrics .card.green h3 {
+    color: #198754;
+}
+
+.metrics .card.green {
+    border-color: #198754;
+}

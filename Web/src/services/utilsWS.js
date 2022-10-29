@@ -13,13 +13,13 @@ export const getData = (connection, method, setData) => {
   if (connection) {
     connection.start()
       .then(result => {
-        console.log('WS New Connected!');
+        console.log('WS New Connected!', method);
 
         connection.on(method, value => {
           /*const data = [...latestUser.current];
           data.push(value);*/
 
-          console.log(value);
+          console.log(method, value);
 
           setData(value);
         })

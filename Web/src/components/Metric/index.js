@@ -1,9 +1,9 @@
 import React from 'react'
 import './styles.css'
 
-const Metric = ({ title = 'NaN', count = 0, sum = 0, min, max }) => {
+const Metric = ({ title = 'NaN', count = 0, sum = 0, min, max, className = '' }) => {
   return (
-    <div className='card'>
+    <div className={`card ${className}`}>
       <div>
         <h3>{title}</h3>
       </div>

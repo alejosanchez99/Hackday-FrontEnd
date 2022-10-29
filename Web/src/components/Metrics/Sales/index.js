@@ -6,20 +6,31 @@ const Sales = () => {
   const [connection, setConnection] = useState(null);
   const [sales, setSales] = useState([]);
 
+  const [green, setGreen] = useState(false);
+
   useEffect(() => {
-    //setConnection(initWSConnection('user'))
+    setConnection(initWSConnection('metric'))
   }, [])
 
   useEffect(() => {
-    //getData(connection, 'sales', setSales)
+    getData(connection, 'sales', setSales)
   }, [connection])
 
   useEffect(() => {
     console.log("sales", sales);
+    setGreen(true);
   }, [sales]);
 
+  useEffect(() => {
+    if (green) {
+      setTimeout(() => {
+        setGreen(false);
+      }, 500);
+    } 
+  }, [green]);
+
   return (
-    <Metric {...sales} />
+    <Metric {...sales} className={green ? 'green' : ''} />
   )
 }
 

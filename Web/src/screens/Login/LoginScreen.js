@@ -52,13 +52,13 @@ const LoginScreen = () => {
             <label>Email</label>
             <div className="input-group mb-3">
               <span className="input-group-text" id="basic-addon1">@</span>
-              <input type="email" name="email" onChange={handleChange} class="form-control" placeholder="youremail@company.com" aria-label="Username" aria-describedby="basic-addon1" />
+              <input type="email" name="email" onChange={handleChange} className="form-control" placeholder="youremail@company.com" aria-label="Username" aria-describedby="basic-addon1" />
             </div>
           </div>
           <div className="mb-3">
             <label>Password</label>
-            <div class="mb-3">
-              <input type="password" placeholder="*************" onChange={handleChange} name="password" id="password" class="form-control" />
+            <div className="mb-3">
+              <input type="password" placeholder="*************" onChange={handleChange} name="password" id="password" className="form-control" />
             </div>
           </div>
 
