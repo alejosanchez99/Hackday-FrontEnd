@@ -26,11 +26,17 @@ const Schedules = () => {
       setTimeout(() => {
         setGreen(false);
       }, 500);
-    } 
+    }
   }, [green]);
 
   return (
-    <Metric {...schedules} className={green ? 'green' : ''} />
+    <Metric
+      title={schedules?.metric?.title}
+      count={schedules?.metric?.count}
+      max={schedules?.metric?.max}
+      min={schedules?.metric?.min}
+      sum={schedules?.metric?.sum}
+      className={green ? 'green' : ''} />
   )
 }
 

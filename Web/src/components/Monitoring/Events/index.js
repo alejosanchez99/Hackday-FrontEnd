@@ -19,7 +19,10 @@ const Events = () => {
   }, [events]);
 
   return (
-    <Metric {...events} />
+    <Metric
+      title={events?.metric?.title}
+      count={events?.metric?.count}
+      sum={events?.metric?.sum} />
   )
 }
 

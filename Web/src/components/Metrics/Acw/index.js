@@ -26,11 +26,17 @@ const Acw = () => {
       setTimeout(() => {
         setGreen(false);
       }, 500);
-    } 
+    }
   }, [green]);
 
   return (
-    <Metric {...acw} className={green ? 'green' : ''} />
+    <Metric
+      title={acw?.metric?.title}
+      count={acw?.metric?.count}
+      max={acw?.metric?.max}
+      min={acw?.metric?.min}
+      sum={acw?.metric?.sum}
+      className={green ? 'green' : ''} />
   )
 }
 

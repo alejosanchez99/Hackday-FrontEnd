@@ -4,7 +4,7 @@ import Metric from '../../Metric';
 
 const Calls = () => {
   const [connection, setConnection] = useState(null);
-  const [calls, setCalls] = useState({});
+  const [calls, setCalls] = useState([]);
 
   const [green, setGreen] = useState(false);
 
@@ -17,7 +17,7 @@ const Calls = () => {
   }, [connection])
 
   useEffect(() => {
-    console.log("calls", calls);
+    console.log("Kev calls", calls);
     setGreen(true);
   }, [calls]);
 
@@ -26,11 +26,17 @@ const Calls = () => {
       setTimeout(() => {
         setGreen(false);
       }, 500);
-    } 
+    }
   }, [green]);
 
   return (
-    <Metric {...calls.metric} className={green ? 'green' : ''} />
+    <Metric
+      title={calls?.metric?.title}
+      count={calls?.metric?.count}
+      max={calls?.metric?.max}
+      min={calls?.metric?.min}
+      sum={calls?.metric?.sum}
+      className={green ? 'green' : ''} />
   )
 }
 

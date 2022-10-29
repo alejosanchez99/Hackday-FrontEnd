@@ -19,7 +19,10 @@ const Errors = () => {
   }, [errors]);
 
   return (
-    <Metric {...errors} />
+    <Metric
+      title={errors?.metric?.title}
+      count={errors?.metric?.count}
+      sum={errors?.metric?.sum} />
   )
 }
 

@@ -17,6 +17,7 @@ const Users = () => {
   }, [connection])
 
   useEffect(() => {
+    console.log("KEV users", users);
     setGreen(true);
   }, [users]);
 
@@ -32,7 +33,7 @@ const Users = () => {
     <div className='users-container'>
       <ul>
         {
-          users.map((user) => {
+          users?.users?.map((user) => {
             return <li className={green ? 'green' : ''}>{user.name}</li>
           })
         }

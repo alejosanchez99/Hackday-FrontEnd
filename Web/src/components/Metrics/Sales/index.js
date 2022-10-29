@@ -26,11 +26,17 @@ const Sales = () => {
       setTimeout(() => {
         setGreen(false);
       }, 500);
-    } 
+    }
   }, [green]);
 
   return (
-    <Metric {...sales} className={green ? 'green' : ''} />
+    <Metric
+      title={sales?.metric?.title}
+      count={sales?.metric?.count}
+      max={sales?.metric?.max}
+      min={sales?.metric?.min}
+      sum={sales?.metric?.sum}
+      className={green ? 'green' : ''} />
   )
 }
 
