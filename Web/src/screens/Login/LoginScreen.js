@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '../../services/authContext';
+import {useNavigate} from "react-router-dom";
 
 const LoginScreen = () => {
   const [user, setUser] = useState({
@@ -8,6 +9,7 @@ const LoginScreen = () => {
   });
   const [error, setError] = useState("");
   const { login, loginWithGoogle } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setError("");
@@ -18,8 +20,7 @@ const LoginScreen = () => {
     setError("");
     try {
       var res = await login(user.email, user.password);
-      //navigate("/");t
-      console("Login ok", res);
+      navigate("/home");
     } catch (error) {
       setError(error.message);
     }
@@ -31,16 +32,15 @@ const LoginScreen = () => {
   const handleGoogleSignin = async () => {
     try {
       await loginWithGoogle();
-      //navigate("/");
+      navigate("/home");
       setError("");
-      console.log("google")
     } catch (error) {
       setError(error.message);
     }
   };
 
   return (
-    <div className="card mt-4 mr-5">
+    <div className="card mt-4 p-2">
       <div className='card-header'>
         Login
       </div>
