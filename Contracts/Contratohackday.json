@@ -1,0 +1,142 @@
+{
+    "version": "0",
+    "id": "d70d56d8-0f20-4404-aa78-989f68ce8a9f",
+    "detail-type": "v2.analytics.users.{id}.aggregates",
+    "source": "genesys.cloud",
+    "account": "",
+    "time": 1666188560,
+    "region": "eu-west-1",
+    "resources": [],
+    "detail": {
+        "topicName": "v2.analytics.c3cea946-044e-4d40-b66a-c93c8dafd1e5.aggregates",
+        "version": "2",
+        "eventBody": {
+            "service": {
+                "id": "10d462ff-b4a7-468f-a9bf-bd364da1e83e",
+                "name": "Hackathon-Service-One",
+                "description": "Hackathon(Demo Service One)",
+                "users": [
+                    {
+                        "id": "10d462ff-b4a7-468f-a9bf-bd364da1e11a",
+                        "name": "Agent 01"
+                    },
+                    {
+                        "id": "10d462ff-b4a7-468f-a9bf-bd364da1e11b",
+                        "name": "Agent 02"
+                    },
+                    {
+                        "id": "10d462ff-b4a7-468f-a9bf-bd364da1e11c",
+                        "name": "Agent 03"
+                    },
+                    {
+                        "id": "10d462ff-b4a7-468f-a9bf-bd364da1e11d",
+                        "name": "Agent 04"
+                    },
+                    {
+                        "id": "10d462ff-b4a7-468f-a9bf-bd364da1e11e",
+                        "name": "Agent 05"
+                    },
+                    {
+                        "id": "10d462ff-b4a7-468f-a9bf-bd364da1e11f",
+                        "name": "Agent 06"
+                    },
+                    {
+                        "id": "10d462ff-b4a7-468f-a9bf-bd364da1e11g",
+                        "name": "Agent 07"
+                    },
+                    {
+                        "id": "10d462ff-b4a7-468f-a9bf-bd364da1e11h",
+                        "name": "Agent 08"
+                    },
+                    {
+                        "id": "10d462ff-b4a7-468f-a9bf-bd364da1e11i",
+                        "name": "Agent 09"
+                    },
+                    {
+                        "id": "10d462ff-b4a7-468f-a9bf-bd364da1e11j",
+                        "name": "Agent 10"
+                    }
+                ]
+            },
+            // En esa propiedad podemos encontrar los indicadores agregados
+            "data": {
+                "metrics": [
+                    {
+                        // Número de eventos/llamadas/interacciones cualquier descripción vale para este inidcador
+                        "metric": "aEvents",
+                        "stats": {
+                            //Cuantos se han producido desdel el último evento
+                            "count": 1,
+                            //El total de eventos que se han producido desde que empezó a emitir el sistema información.
+                            "sum": 15861
+                        }
+                    },
+                    {
+                        // Número de llamadas de teléfono
+                        "metric": "aCalls",
+                        "stats": {
+                            // Llamadas de teléfono concurrentes.
+                            "count": 0,
+                            // Total de llamadas telefónicas recibidas desde que el sistema comenzó a emitir eventos
+                            "sum": 71598,
+                            // Mínimo de llamadas concurrentes que ha habido en el sistema
+                            "min": 0,
+                            // Máximo de llamadas concurrentes que ha habido en el sistema (Esto significa que en algún momento nuestro sistema tenía 9 llamadas concurrentes)
+                            "max": 9
+                        }
+                    },
+                    {
+                        // Este indicador indica el tiempo de ACW
+                        "metric": "aAcw",
+                        "stats": {
+                            // Media de ACW en el momento de emitir el evento
+                            "count": 44,
+// Total de segundos que los asesores han estando en el estado de ACW
+                            "sum": 947351,
+                            // Minimma media de ACW
+                            "min": 0,
+                            // Máxima media de ACW
+                            "max": 119
+                        }
+                    },
+                    {
+                        // Número de ventas
+                        "metric": "aSales",
+                        "stats": {
+                            // Ventas producidas desde el último evento
+                            "count": 0,
+                            // Total de ventas desde que el sistema empezó a emitir eventos
+                            "sum": 3609,
+                            // Mínimo de ventas del historico
+                            "min": 0,
+                            // Máximo de ventas del historico 
+                            "max": 1
+                        }
+                    },
+                    {
+                        // LLamadas programadas
+                        "metric": "aSchedules",
+                        "stats": {
+                            // Total de llamadas programadas desde el último evento
+                            "count": 0,
+                            // Total de llamadas programadas desde que el sistema emepezó a emitir eventos
+                            "sum": 1466,
+                            "min": 0,
+                            "max": 1
+                        }
+                    },
+                    {   // Errores genéricos cometidos por el sistema de eventos
+                        "metric": "aErrors",
+                        "stats": {
+                            "count": 0,
+                            // Cantidad de errores desde que el sistema empezó a emitir eventos
+                            "sum": 160,
+                            "min": 0,
+                            "max": 1
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
