@@ -1,0 +1,8 @@
+.card {
+    padding: 10px;
+    width: 200px;
+}
+
+.card-badges .badge{
+    margin-right: 10px;
+}

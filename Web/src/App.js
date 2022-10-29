@@ -1,3 +1,4 @@
+import Home from "./components/Home";
 import Input from "./components/Input";
 import Result from "./components/Result";
 import { AppProvider } from './context/context'
@@ -5,8 +6,7 @@ import { AppProvider } from './context/context'
 const App = () => {
   return (
     <AppProvider>
-      <Input />
-      <Result />
+      <Home />
     </AppProvider>
   );
 }
