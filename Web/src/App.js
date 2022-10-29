@@ -9,9 +9,9 @@ import { AuthProvider } from "./services/authContext";
 const App = () => {
   return (
     <AuthProvider>
-    <AppProvider>
-      <Main />
-    </AppProvider>
+      <AppProvider>
+        <Main />
+      </AppProvider>
   </AuthProvider>
   );
 }
