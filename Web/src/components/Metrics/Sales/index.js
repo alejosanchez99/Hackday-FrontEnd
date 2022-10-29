@@ -2,27 +2,27 @@ import { useEffect, useState } from 'react'
 import { initWSConnection, getData } from '../../../services/utilsWS'
 import Metric from '../../Metric';
 
-const Calls = () => {
+const Sales = () => {
   const [connection, setConnection] = useState(null);
-  const [calls, setCalls] = useState([]);
+  const [sales, setSales] = useState([]);
 
   useEffect(() => {
     setConnection(initWSConnection('user'))
   }, [])
 
   useEffect(() => {
-    getData(connection, 'calls', setCalls)
+    getData(connection, 'sales', setSales)
   }, [connection]) 
 
   useEffect(() => {
-    console.log("calls", calls);
-  }, [calls]);
+    console.log("sales", sales);
+  }, [sales]);
 
   return (
     <div>
-      <Metric {...calls} />
+      <Metric {...sales} />
     </div>
   )
 }
 
-export default Calls
+export default Sales

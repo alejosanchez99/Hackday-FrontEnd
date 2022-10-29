@@ -1,11 +1,11 @@
 import React from 'react'
 import './styles.css'
 
-const Metric = ({ name, title, count = 0, sum = 0, min = 0, max = 0 }) => {
+const Metric = ({ title = 'NaN', count = 0, sum = 0, min = 0, max = 0 }) => {
   return (
     <div className='card'>
       <div>
-        <h3>{title} - {name}</h3>
+        <h3>{title}</h3>
       </div>
       <div className='card-badges'>
         <span className="badge text-bg-primary">{count}</span>
