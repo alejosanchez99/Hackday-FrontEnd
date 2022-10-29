@@ -40,7 +40,7 @@ const LoginScreen = () => {
   };
 
   return (
-    <div className="card mt-4 p-2">
+    <div className="card mt-4 p-2" style={{width: "400px"}}>
       <div className='card-header'>
         Login
       </div>
@@ -50,9 +50,9 @@ const LoginScreen = () => {
         >
           <div className='mb-3'>
             <label>Email</label>
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="basic-addon1">@</span>
-              <input type="email" name="email" onChange={handleChange} class="form-control" placeholder="youremail@company.tld" aria-label="Username" aria-describedby="basic-addon1" />
+            <div className="input-group mb-3">
+              <span className="input-group-text" id="basic-addon1">@</span>
+              <input type="email" name="email" onChange={handleChange} class="form-control" placeholder="youremail@company.com" aria-label="Username" aria-describedby="basic-addon1" />
             </div>
           </div>
           <div className="mb-3">
@@ -78,7 +78,7 @@ const LoginScreen = () => {
           </div>
           {
             error && (
-              <div class="alert alert-danger mt-3" role="alert">
+              <div className="alert alert-danger mt-3" role="alert">
                 {error}
               </div>
             )
