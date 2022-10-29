@@ -1,3 +1,4 @@
+import Home from "./components/Home";
 import Input from "./components/Input";
 import Result from "./components/Result";
 import { AppProvider } from './context/context'
@@ -8,10 +9,10 @@ import { AuthProvider } from "./services/authContext";
 const App = () => {
   return (
     <AuthProvider>
-      <AppProvider>
-        <Main />
-      </AppProvider>
-    </AuthProvider>
+    <AppProvider>
+      <Main />
+    </AppProvider>
+  </AuthProvider>
   );
 }
 
