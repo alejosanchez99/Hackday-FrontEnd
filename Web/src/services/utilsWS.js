@@ -9,7 +9,7 @@ export const initWSConnection = (pathSuscription = '') => {
   return connection;
 }
 
-export const getData = (connection, method) => {
+export const getData = (connection, method, setData) => {
   if (connection) {
     connection.start()
       .then(result => {
@@ -21,7 +21,7 @@ export const getData = (connection, method) => {
 
           console.log(value);
 
-          return value;
+          setData(value);
         })
       })
       .catch(e => console.log('WS Connection failed: ', e));

@@ -11,9 +11,7 @@ const Calls = () => {
   }, [])
 
   useEffect(() => {
-    const data = getData(connection, 'calls')
-    console.log("DATa", data);
-    setCalls(data);
+    getData(connection, 'calls', setCalls)
   }, [connection]) 
 
   useEffect(() => {
