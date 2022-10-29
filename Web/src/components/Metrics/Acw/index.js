@@ -7,11 +7,11 @@ const Acw = () => {
   const [acw, setAcw] = useState([]);
 
   useEffect(() => {
-    setConnection(initWSConnection('user'))
+    //setConnection(initWSConnection('user'))
   }, [])
 
   useEffect(() => {
-    getData(connection, 'Acw', setAcw)
+    //getData(connection, 'Acw', setAcw)
   }, [connection])
 
   useEffect(() => {

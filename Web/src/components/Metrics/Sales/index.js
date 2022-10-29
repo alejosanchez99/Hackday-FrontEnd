@@ -7,11 +7,11 @@ const Sales = () => {
   const [sales, setSales] = useState([]);
 
   useEffect(() => {
-    setConnection(initWSConnection('user'))
+    //setConnection(initWSConnection('user'))
   }, [])
 
   useEffect(() => {
-    getData(connection, 'sales', setSales)
+    //getData(connection, 'sales', setSales)
   }, [connection])
 
   useEffect(() => {

@@ -36,12 +36,14 @@ const Users = () => {
   }, [users]);
 
   return (
-    <div className='users'>
-      {
-        users.map((user) => {
-          return <span class="badge text-bg-dark">{user.name}</span>
-        })
-      }
+    <div className='users-container'>
+      <ul>
+        {
+          users.map((user) => {
+            return <li>{user.name}</li>
+          })
+        }
+      </ul>
     </div>
   )
 }

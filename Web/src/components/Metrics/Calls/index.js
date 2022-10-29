@@ -7,11 +7,11 @@ const Calls = () => {
   const [calls, setCalls] = useState([]);
 
   useEffect(() => {
-    setConnection(initWSConnection('user'))
+    //setConnection(initWSConnection('user'))
   }, [])
 
   useEffect(() => {
-    getData(connection, 'calls', setCalls)
+    //getData(connection, 'calls', setCalls)
   }, [connection])
 
   useEffect(() => {

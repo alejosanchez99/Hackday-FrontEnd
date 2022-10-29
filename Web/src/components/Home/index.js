@@ -15,6 +15,9 @@ const Home = () => {
 
   return (
     <div className='container-home'>
+      <div className='users'>
+        <Users />
+      </div>
       <div className='home'>
         <ul class="nav nav-tabs">
           <li class="nav-item" onClick={() => setViewGeneralActive(true)}>
@@ -33,10 +36,6 @@ const Home = () => {
             <Acw />
             <Sales />
             <Schedules />
-          </div>
-          <div className='separator'></div>
-          <div className='users'>
-            <Users />
           </div>
         </div>
 

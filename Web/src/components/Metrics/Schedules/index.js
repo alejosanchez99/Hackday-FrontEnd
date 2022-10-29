@@ -7,11 +7,11 @@ const Schedules = () => {
   const [schedules, setSchedules] = useState([]);
 
   useEffect(() => {
-    setConnection(initWSConnection('user'))
+    //setConnection(initWSConnection('user'))
   }, [])
 
   useEffect(() => {
-    getData(connection, 'schedules', setSchedules)
+    //getData(connection, 'schedules', setSchedules)
   }, [connection])
 
   useEffect(() => {
