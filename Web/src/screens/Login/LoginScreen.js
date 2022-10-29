@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAuth } from '../../services/authContext';
 
 const LoginScreen = () => {
@@ -7,8 +7,11 @@ const LoginScreen = () => {
     password: ""
   });
   const [error, setError] = useState("");
-
   const { login, loginWithGoogle } = useAuth();
+
+  useEffect(() => {
+    setError("");
+  },[])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,6 +32,7 @@ const LoginScreen = () => {
     try {
       await loginWithGoogle();
       //navigate("/");
+      setError("");
       console.log("google")
     } catch (error) {
       setError(error.message);
@@ -36,7 +40,7 @@ const LoginScreen = () => {
   };
 
   return (
-    <div className="card col-md-6 offset-md-3">
+    <div className="card mt-4 mr-5">
       <div className='card-header'>
         Login
       </div>
@@ -58,7 +62,7 @@ const LoginScreen = () => {
             </div>
           </div>
 
-          <div className="flex">
+          <div className="d-flex justify-content-evenly">
             <button
               className="btn btn-primary"
               type="submit"
@@ -72,11 +76,16 @@ const LoginScreen = () => {
               Entrar con Google
             </button>
           </div>
+          {
+            error && (
+              <div class="alert alert-danger mt-3" role="alert">
+                {error}
+              </div>
+            )
+          }
         </form>
 
-        <p className="my-4 text-sm flex justify-between px-3">
-          Crear Cuenta?
-        </p>
+
       </div>
     </div>
 
