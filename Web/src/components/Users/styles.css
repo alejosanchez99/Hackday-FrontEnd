@@ -1,0 +1,8 @@
+.users {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.users .badge {
+    margin: 2px;
+}

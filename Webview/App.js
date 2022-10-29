@@ -12,7 +12,7 @@ export default function App() {
       <View style={ { width: '100%', height: '100%' } }>
       <WebView 
           source={{ uri: URL }}
-          onLoad={console.log('Webview cargada')}
+          onLoad={console.log('Webview loaded!')}
         />
 
       </View>

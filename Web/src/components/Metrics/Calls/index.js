@@ -12,16 +12,14 @@ const Calls = () => {
 
   useEffect(() => {
     getData(connection, 'calls', setCalls)
-  }, [connection]) 
+  }, [connection])
 
   useEffect(() => {
     console.log("calls", calls);
   }, [calls]);
 
   return (
-    <div>
-      <Metric {...calls} />
-    </div>
+    <Metric {...calls} />
   )
 }
 

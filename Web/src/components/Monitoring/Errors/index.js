@@ -2,25 +2,25 @@ import { useEffect, useState } from 'react'
 import { initWSConnection, getData } from '../../../services/utilsWS'
 import Metric from '../../Metric';
 
-const Schedules = () => {
+const Errors = () => {
   const [connection, setConnection] = useState(null);
-  const [schedules, setSchedules] = useState([]);
+  const [errors, setErrors] = useState([]);
 
   useEffect(() => {
     setConnection(initWSConnection('user'))
   }, [])
 
   useEffect(() => {
-    getData(connection, 'schedules', setSchedules)
+    getData(connection, 'errors', setErrors)
   }, [connection])
 
   useEffect(() => {
-    console.log("schedules", schedules);
-  }, [schedules]);
+    console.log("errors", errors);
+  }, [errors]);
 
   return (
-    <Metric {...schedules} />
+    <Metric {...errors} />
   )
 }
 
-export default Schedules
+export default Errors

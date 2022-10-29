@@ -10,7 +10,7 @@ const App = () => {
   return (
     <AuthProvider>
     <AppProvider>
-      <Main />
+      <Home />
     </AppProvider>
   </AuthProvider>
   );

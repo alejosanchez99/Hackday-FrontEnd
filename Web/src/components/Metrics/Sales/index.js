@@ -12,16 +12,14 @@ const Sales = () => {
 
   useEffect(() => {
     getData(connection, 'sales', setSales)
-  }, [connection]) 
+  }, [connection])
 
   useEffect(() => {
     console.log("sales", sales);
   }, [sales]);
 
   return (
-    <div>
-      <Metric {...sales} />
-    </div>
+    <Metric {...sales} />
   )
 }
 

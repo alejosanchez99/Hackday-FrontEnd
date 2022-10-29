@@ -12,16 +12,14 @@ const Acw = () => {
 
   useEffect(() => {
     getData(connection, 'Acw', setAcw)
-  }, [connection]) 
+  }, [connection])
 
   useEffect(() => {
     console.log("Acw", acw);
   }, [acw]);
 
   return (
-    <div>
-      <Metric {...acw} />
-    </div>
+    <Metric {...acw} />
   )
 }
 
