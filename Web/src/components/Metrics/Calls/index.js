@@ -13,7 +13,7 @@ const Calls = () => {
   }, [])
 
   useEffect(() => {
-    getData(connection, 'calls', setCalls)
+    getData(connection, 'aCalls', setCalls)
   }, [connection])
 
   useEffect(() => {

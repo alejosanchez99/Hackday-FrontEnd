@@ -13,7 +13,7 @@ const Sales = () => {
   }, [])
 
   useEffect(() => {
-    getData(connection, 'sales', setSales)
+    getData(connection, 'aSales', setSales)
   }, [connection])
 
   useEffect(() => {

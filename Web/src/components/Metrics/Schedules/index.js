@@ -13,7 +13,7 @@ const Schedules = () => {
   }, [])
 
   useEffect(() => {
-    getData(connection, 'schedules', setSchedules)
+    getData(connection, 'aSchedules', setSchedules)
   }, [connection])
 
   useEffect(() => {

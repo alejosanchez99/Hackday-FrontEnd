@@ -7,11 +7,11 @@ const Events = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    setConnection(initWSConnection('user'))
+    setConnection(initWSConnection('metric'))
   }, [])
 
   useEffect(() => {
-    getData(connection, 'events', setEvents)
+    getData(connection, 'aEvents', setEvents)
   }, [connection])
 
   useEffect(() => {

@@ -7,11 +7,11 @@ const Errors = () => {
   const [errors, setErrors] = useState([]);
 
   useEffect(() => {
-    setConnection(initWSConnection('user'))
+    setConnection(initWSConnection('metric'))
   }, [])
 
   useEffect(() => {
-    getData(connection, 'errors', setErrors)
+    getData(connection, 'aErrors', setErrors)
   }, [connection])
 
   useEffect(() => {

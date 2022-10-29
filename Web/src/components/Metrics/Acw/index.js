@@ -13,7 +13,7 @@ const Acw = () => {
   }, [])
 
   useEffect(() => {
-    getData(connection, 'acw', setAcw)
+    getData(connection, 'aAcw', setAcw)
   }, [connection])
 
   useEffect(() => {
