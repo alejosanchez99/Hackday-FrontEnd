@@ -10,7 +10,11 @@ const Input = () => {
     }
 
     return (
+        <>
+        <label>Soy el nuevo</label>
         <input type="text" onChange={handleChange} />
+
+        </>
     )
 }
 

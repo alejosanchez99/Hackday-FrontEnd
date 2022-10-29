@@ -86,7 +86,7 @@
                         }
                     },
                     {
-                        // Este indicador indica el tiempo de ACW
+                        // Este indicador indica el tiempo de ACW - After call work
                         "metric": "aAcw",
                         "stats": {
                             // Media de ACW en el momento de emitir el evento
