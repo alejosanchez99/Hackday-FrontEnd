@@ -11,15 +11,13 @@ const Main = () => {
   return(
     <div className='main'>
       <Header />
-      <div className='d-flex justify-content-center'>
-        <div className=''>
+      <div>
           <BrowserRouter>
             <Routes>
               <Route path='/' element={ <LoginScreen />} />
               <Route path='/home' element={<ProtectedRoute> <Home/> </ProtectedRoute> }/>
             </Routes>
             </BrowserRouter>
-        </div>
       </div>
     </div>
   );

@@ -1,0 +1,29 @@
+.login-screen {
+    display: flex;
+    justify-content: center;
+}
+
+.login-screen .separator {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: 1px solid;
+    background-color: #000;
+}
+
+.login-screen .google-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-screen .original {
+    width: 100%;
+}
+
+
+.login-screen .google-button img {
+    width: 20px;
+    margin-right: 10px;
+}
